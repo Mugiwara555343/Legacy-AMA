@@ -1,0 +1,15 @@
+# Core dependencies for AI Memory Architecture
+fastapi>=0.68.0
+uvicorn>=0.15.0
+gradio>=3.0.0
+requests>=2.25.0
+watchdog>=2.1.0
+llama-cpp-python>=0.2.0
+jsonschema>=3.2.0
+
+# Optional dependencies for development
+pygame>=2.0.0  # For mini projects
+turtle  # Built-in, but listed for clarity
+
+# Note: Some dependencies like pathlib, json, datetime, threading, 
+# hashlib, subprocess, time, os, sys are built-in Python modules 
