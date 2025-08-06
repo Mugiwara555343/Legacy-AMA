@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  watcher:
+    build: .
+    command: python src/watchers/memory_watcher.py
+    volumes:
+      - ./demo:/input 
