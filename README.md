@@ -1,9 +1,7 @@
 # Legacy-AMA (v1 • Archived)
 
-HEAD
+
 [![CI](https://github.com/Mugiwara555343/Legacy-AMA/actions/workflows/python-ci.yml/badge.svg)](https://github.com/Mugiwara555343/Legacy-AMA/actions/workflows/python-ci.yml)
-=======
-00256e4f3dc09fc074d3038d66699600c3ffcd75
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 
