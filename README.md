@@ -1,41 +1,94 @@
-# Legacy-AMA (v1 • Archived)
+# Legacy-AMA (v1) — AI Memory Architecture (Archived)
 
-
-[![CI](https://github.com/Mugiwara555343/Legacy-AMA/actions/workflows/python-ci.yml/badge.svg)](https://github.com/Mugiwara555343/Legacy-AMA/actions/workflows/python-ci.yml)
+[![Status: Archived](https://img.shields.io/badge/status-archived-lightgrey.svg)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 
-> **Offline, local-first AI memory assistant prototype.**  
-> Parsed 400+ personal journals into structured JSON and routed context to multiple LLMs on an 8 GB GPU — fully air-gapped.
+_Local-first memory pipeline: notes → structured JSON → multi-model reflections._
 
-## 📦 Repo layout
-<details><summary>Repo layout</summary>
+---
 
-| Path | Purpose |
-|------|---------|
-| **src/** | Core code – current parsers, watchers, Gradio UI |
-| **api_clients/** | FastAPI wrappers for local LLMs (Capy, Hermes, MythoMax…) |
-| **demo/** | Minimal demo pipeline for first-time users |
-| **docs/images** | Diagrams, screenshots |
-| **docs/troubleshooting** | Legacy debug shots |
-| **docs/versions** | Early parser/watcher iterations |
-| **workflows/** | Step-by-step execution guides |
-| **archive/mini_projects** | Old learning scripts (kept for transparency) |
+## 📌 Why this repo exists
 
-</details>
+This is the **v1 prototype** of my AI Memory Architecture — built to process raw notes into structured memories, run them through multiple LLMs, and output enriched summaries and styled Markdown.
 
-## 🚀 Python Quickstart
-```bash
-git clone https://github.com/Mugiwara555343/Legacy-AMA.git
-cd Legacy-AMA
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-python src/demo_run.py  # parses demo logs & returns a Q&A
+> **What this repo _is_:**
+> - v1 prototype of the full system
+> - Design docs, diagrams, and screenshots
+> - Historical record of architecture & workflow
+>
+> **What this repo _is not_:**
+> - Maintained or runnable codebase (use links below for current tools)
+
+---
+
+## 🚀 Where to go now
+
+- **Parser/CLI:** [note-to-json on PyPI](https://pypi.org/project/note-to-json/)  
+- **Minimal maintained demo:** [note-to-json-demo on GitHub](https://github.com/Mugiwara555343/note-to-json-demo)
+
+---
+
+## 🧩 Architecture at a glance
+
+![Early Sketch](docs/images/memory_flow_diagram_dark(2).png)
+
+Alternative early sketch:  
+![Memory Flow Diagram](docs/images/memory_flow_diagram_dark.png)
+
+---
+
+## 📖 A Workflow storyboard
+
+---
+
+### ⚡Entire Model/session orchestration started
+![Step 1: Model Start](docs/images/Screenshot-2025-07-12-040512.png)  
+_Sessions spin up; logs show pipelines ready._
+
+---
+
+### ⏳ A few examples of the entire workflow
+
+- ### Parsed file & Terminal visual
+![Step 3: Terminal Run](docs/images/Screenshot-2025-06-27-232647.png)  
+
+- ### JSON error but parser still activates
+![Step 4: Gradio UI](docs/images/Screenshot-2025-06-27-23202444.png)  
+
+- ### All three models active and parsing 
+![Step 5: Prompt Injection](docs/images/Screenshot-2025-07-12-202332.png)  
+
+---
+
+## 🛠️ Design notes
+
+- **Local-first & offline** — no external APIs required.
+- **Composable chain** — each model has a distinct role.
+- **Resilient** — pipeline continues with fallbacks on model failure.
+
+**v1 Model Chain:**  
+- **Capybara** → tagging & emotional tone extraction  
+- **Hermes** → summarization  
+- **MythoMax** → stylistic rewrite
+
+---
+
+## 🗂️ Folder map
+
+```
+docs/            # diagrams & screenshots
+demo/            # stubs or prototypes
+archive/         # older experiments
 ```
 
-### 🐳 Docker Quickstart
-```bash
-git clone https://github.com/Mugiwara555343/Legacy-AMA.git
-cd Legacy-AMA
-docker compose up --build
-```
+---
+
+## 📄 License & provenance
+
+MIT License — see [LICENSE](LICENSE).  
+Development period: 2025 (v1).  
+~ X commits before v2 redesign.
+
+---
+
+_Current repo preserved as an artifact. See linked successors for maintained tools._
